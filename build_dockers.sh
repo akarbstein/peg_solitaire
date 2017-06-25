@@ -12,8 +12,11 @@ docker_tag_base=akarbstein/peg_solitaire
 
 # FIXME: Insert sanity checking for $build_dir
 if [ ! -d "${build_dir}" ]; then
-  echo "Build dir does not exists"
-  exit -1
+    mkdir -p ${build_dir}
+    if [ ! -d "${build_dir}" ]; then
+        echo "Build dir does not exists"
+        exit -1
+    fi
 fi
 
 # Cleanup
