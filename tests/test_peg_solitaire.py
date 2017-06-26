@@ -17,4 +17,4 @@ class TestPegSolitaire(unittest.TestCase):
             [x, x, 1, 1, 1, x, x],
             [x, x, 1, 1, 1, x, x],
         ]
-        self.assertEqual(game.playing_field(),playing_field,msg="Playing field not correctly initialized")
+        self.assertEqual(game.playing_field,playing_field,msg="Playing field not correctly initialized")
